@@ -17,10 +17,12 @@ Scene types: Your prototype should demonstrate how at least four kinds of distin
 
 
 Communication between scenes: The choices that players made on one scene must have some impact on the appearance of other screens. The inventory system used in D2 is an example of this. Your game might have an achievement system, a score system, or simply remember if someone has watched a mandatory cutscene so that the player can be allowed to skip it only after they have watched it once already. Your documentation should explain where we should look in your code to see how you implemented this communication. (For example, maybe you simply have a global variable that is updated by several separate scenes.)
+
 -Created a variable in the options scene that will hold the sound setting for the entire game.  Will be used to scale sound effects.
 
 
 Reachability: All important scenes must be reachable in the scene flow prototype. For example, if your game involves a good ending and a bad ending, there should be some way for us to practice reaching each ending. In the placeholder for scenes where players make interesting choices or need to play well to progress, you might have placeholder buttons that allow us to simulate high-skill gameplay with a single tap. (In many of your Roly Poly scene flow prototypes, many of you used instructions like "press 1 to win; press 2 to lose" in the placeholders for the core gameplay scenes.
+
 -All scenes are reachable.  Has placeholder buttons for the different endings in the gameplay scene and brings you to them.
 
 
@@ -29,4 +31,5 @@ Coordinated fades to a common color: for example, one scene fades to black and t
 Cross-fades: The two scenes are briefly active at the same time while some effect visually blends between them (e.g. a stinger video plays atop them).
 Pause or Sleep: Rather than having the previous scene completely Stop, the scene is left in a paused or sleeping state so that it can be returned to without restarting it.
 [Some other design proposed by your team]
+
 -Has a transition from the main title to the main menu with a fade out to a fade in.
