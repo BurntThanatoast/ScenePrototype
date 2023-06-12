@@ -1,13 +1,32 @@
-Cinematics prototype
+Scene Flow Prototype Requirements
 
-Non-interactive cinematic: Your prototype should contain a visually-rich prototype for at least one non-interactive scene. This might be one showing a logo for your imaginary game studio, introducing your game's main setting and/or characters, or even presenting the game's downloading progress in a visually enticing way. This scene should have, at minimum a descernable beginning, middle, and end. For example, the beginning might fade in a logo, the middle might add a visual sparkle and play an iconic sound effect, and the end might fade the logo out.
 
-Created a logo for our fake game studio where it fades in and fades out after a certain amount of timing and brings you to the main menu.
+Scene types: Your prototype should demonstrate how at least four kinds of distinct types of scenes are used in your game. Every game needs to have a distinct main title screen and a separate credits screen that is easy to access without finishing the game first. The inclusion of other types of scenes can vary between teams. Kinds:
 
-Interactive cinematic: Your prototype should contain a visually-rich prototype for at least one interactive scene. This might be your game's main title or menu screen (with buttons to select), or maybe a scene that introduces the main character by having them walk onto the screen (leaving the player in control of the character at the end). The scene should feel visually alive even when the player is not touching it, and it should feel responsive when they do touch it. Perhaps visual elements slide in only when needed, fade in incrementally to build up to a complex result, or are dynamically tinted in ways that provide the user with feedback on their actions (e.g. the button is darkened when the user has pressed it down but not released it yet).
+    Main title scene: Players should see this scene before any gameplay begins (some non-gameplay scenes, such as opening cinematics or logos may come before it, however).
+    -Created a main tile scene where we have our made up studio logo fade in and out.
 
-Created a main menu with interactable buttons.  Also made it so that the main menu has a "glitch" effect with the usage of the fade in and fading out tween in phaser.
+    Credits scene: This scene will be used by you are your teammates to show that you made this game (and that you aren't just demonstrating work done by others). For the prototype, the contents of this scene might just be placeholder text such as "[credits go here]".
+    -Created a credits scene that you can reach by clicking on the credits button in the main menu.
 
-Choreography in code: The source code implementing at least one of your cinematics must be based on tween chains, timelines, or chained event callbacks, or your engine's equivalent of these Phaser features (rather than many separate animations that were hand-timed to match one another). Although you are encouraged to explore using dedicated cinematic authoring tools (e.g. Adobe Premier or Blender), at least one of your cinematics must be build from hand-typed textual code.1+ object motion animation: (1) Polygon structure interactive in the start screen
+    Gameplay scene: There might be multiple types of gameplay scenes, and, for this prototype, the contents of each one might just be text messages like "[overworld map]" or "[dialog puzzle 3]".
+    -Created a gameplay scene that is reachable by clicking the start button in the main menu.
 
-The tween chain is in the studio thing where the fade in and fade out.  
+    Menu scene: Many games have a screen where you can adjust settings for the game. Even if you don't think your game needs a settings screen now, it is a good idea to make one so that there is an obvious place to add player customization features later.
+    -Created a menu/settings/options screen that is reachable from the main menu by clicking on the options button.
+
+
+Communication between scenes: The choices that players made on one scene must have some impact on the appearance of other screens. The inventory system used in D2 is an example of this. Your game might have an achievement system, a score system, or simply remember if someone has watched a mandatory cutscene so that the player can be allowed to skip it only after they have watched it once already. Your documentation should explain where we should look in your code to see how you implemented this communication. (For example, maybe you simply have a global variable that is updated by several separate scenes.)
+-Created a variable in the options scene that will hold the sound setting for the entire game.  Will be used to scale sound effects.
+
+
+Reachability: All important scenes must be reachable in the scene flow prototype. For example, if your game involves a good ending and a bad ending, there should be some way for us to practice reaching each ending. In the placeholder for scenes where players make interesting choices or need to play well to progress, you might have placeholder buttons that allow us to simulate high-skill gameplay with a single tap. (In many of your Roly Poly scene flow prototypes, many of you used instructions like "press 1 to win; press 2 to lose" in the placeholders for the core gameplay scenes.
+-All scenes are reachable.  Has placeholder buttons for the different endings in the gameplay scene and brings you to them.
+
+
+Transitions: The scene flow prototype must demonstrate the use of at least one kind of fancy transition that is appropriate to your game design. Kinds:
+Coordinated fades to a common color: for example, one scene fades to black and the next scene fades from black.
+Cross-fades: The two scenes are briefly active at the same time while some effect visually blends between them (e.g. a stinger video plays atop them).
+Pause or Sleep: Rather than having the previous scene completely Stop, the scene is left in a paused or sleeping state so that it can be returned to without restarting it.
+[Some other design proposed by your team]
+-Has a transition from the main title to the main menu with a fade out to a fade in.
